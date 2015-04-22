@@ -62,6 +62,9 @@ Yes, it is, as well as with the latest PHP.
 
 == Changelog ==
 
+= 1.5 = 
+Fixed admin settings
+
 = 1.0 =
 * First release
 

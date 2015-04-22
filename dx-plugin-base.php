@@ -12,7 +12,7 @@
 
  * Author URI: http://vbsocial.com
 
- * Version: 1.0
+ * Version: 1.5
 
  * Text Domain: Print-Money
 
