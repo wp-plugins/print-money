@@ -506,8 +506,14 @@ if($_POST[$btn]) {
 
             <p>Track how many times a button has been clicked for an image. This doesn't mean sales but shows how well your buttons are performing click wise. Larger Images size are more acceptable prints. <br />
               <br />
-            <a href="https://www.dotphoto.com/SignIn.asp" target="new">Check your earnings and withdraw here.</a></p>
+              
+ <?php             
+              
+  $affiliateID = "$_SERVER[HTTP_HOST]";
+  
+   echo  "<div><h3>View/Withdraw Your <a href='http://www.dotphoto.com/WPLand.asp?affiliateID=$affiliateID&action=claim'>Earnings</a></h3></div>";
 
+?>
             <table class="widefat">
                 <thead>
                 <tr>
