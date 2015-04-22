@@ -7,7 +7,7 @@ Tested up to: 4.0
 Stable tag: 1.5
 License: GPLv2 or later
 
-Earn more money from your users by adding a hover button to any WordPress image to enable your users to buy prints and photo gifts sucha as magnets, frames, mousepads and more. Print Money pays site owners 15% of sales. 
+Earn more money from your site by adding a print button to any WordPress image to enable your users to buy prints and gifts.
 
 == Description ==
 
