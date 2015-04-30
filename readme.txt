@@ -50,6 +50,43 @@ If you have any compatibility issues, lets us know, and we'll work to add that t
 
 Yes, it is, as well as with the latest PHP. 
 
+=How do I apply a button to a photo?=
+
+Install the plugin. By default, a hover button will appear when your mouse appears over an image. You can however change this via settings to appear at the top right, top left, bottom right, bottom left etc.
+
+=How do I prevent a button from appearing on a photo?=
+
+In the settings of Print Money, scroll to the bottom, and add any pages you wish to prevent the button from showing.
+
+=How do I make a hover button (an invisible button)?=
+
+This is the default setting.
+
+=How do I change the "look" of a visible button?=
+
+You can change the text in the settings. If you wish to change the actual appearance, you’ll need to know some css and css attributes. You can add CSS inside of wp-admin or to our stylesheet within the plugin “samplestyle.css”
+
+=How do I get paid?=
+
+Click the link at the top right of the settings “View/Withdraw Your Earnings”. From that link, set up your free account, check your withdrawal limit.
+
+=Can I make more (or less) than 15%?=
+
+You earn exactly 15% per sale from your site, based on the type of product that your user decided to buy. Some product prints are more valuable than others, resulting in bigger sales for you. 
+
+=The button isn’t showing for us?=
+
+Please contact daveaite@gmail.com 
+
+=How did you determine 15% to admins?=
+
+We price the products low and affordable for users to get their prints. 15% is a large chunk of the earnings when a majority of the cost goes to the creation of the actual print, shipping, developer and operational costs.
+
+=Can I earn a lot?=
+
+Yes, this is a very easy and affordable, way of creating prints out of the photos on 
+
+
 == Screenshots ==
 
 1. Print Money button shows when hovering over WordPress image
