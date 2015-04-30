@@ -84,7 +84,7 @@ We price the products low and affordable for users to get their prints. 15% is a
 
 = Can I earn a lot? =
 
-Yes, this is a very easy and affordable, way of creating prints out of the photos on 
+Yes, this is a very easy way of integrating a powerful, yet easy money making suystem on your site.
 
 
 == Screenshots ==
