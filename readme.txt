@@ -64,19 +64,19 @@ This is the default setting.
 
 = How do I change the "look" of a visible button? =
 
-You can change the text in the settings. If you wish to change the actual appearance, you’ll need to know some css and css attributes. You can add CSS inside of wp-admin or to our stylesheet within the plugin “samplestyle.css”
+You can change the text in the settings. If you wish to change the actual appearance, you will need to know basic css and css attributes. You can add CSS inside of wp-admin or to our stylesheet within the plugin samplestyle.css
 
 = How do I get paid? =
 
-Click the link at the top right of the settings “View/Withdraw Your Earnings”. From that link, set up your free account, check your withdrawal limit.
+Click the link at the top right of the setting View/Withdraw Your Earnings. From that link, set up your free account, check your withdrawal limit.
 
 = Can I make more (or less) than 15%? =
 
 You earn exactly 15% per sale from your site, based on the type of product that your user decided to buy. Some product prints are more valuable than others, resulting in bigger sales for you. 
 
-= The button isn’t showing for us? =
+= The button is not showing for us? =
 
-Please contact daveaite@gmail.com 
+Please contact daveaite@gmail.com and describe your issue further.
 
 = How did you determine 15% to admins? =
 
