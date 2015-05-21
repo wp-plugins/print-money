@@ -72,6 +72,7 @@ if($_POST[$btn]) {
     }
 
 
+
     function inorup($data = NULL) {
 
         if($data == NULL) {
@@ -98,6 +99,34 @@ if($_POST[$btn]) {
 						
 <br><br>
 
+                <h3>Theme Compatibility</h3>
+
+                <p>If the image is not showing on your theme, you'll have to add a class identifier for your theme. You can add multiple classes to target parts of your site Not sure what it is, try "blog" and update. <small>(other typical classes to try: blog,entry-content,entry-header)</small></p>
+
+                <?php
+
+                doData('save-img-print-btn-class', 'insert-or-update', 'img-print-btn-class', 'img-print-btn-class', $_POST['img-print-btn-class'], 'img-print-btn-class');
+
+                $page = get_page_by_path("img-print-btn-class", OBJECT, "img-print-btn-class");
+
+                $title = get_post($page->ID);
+
+                ?>
+
+
+                <form method="POST">
+
+                    <?php echo inorup($title); ?>
+
+                    <input type="hidden" name="ID" value="<?php echo $page->ID; ?>">
+
+                    <input type="text" name="img-print-btn-class" value="<?php echo $title->post_content; ?> " style="width:100%;">
+                    <br><br>
+                    <input class="button-primary" style="float:right;"  type="submit" name="save-img-print-btn-class" value="<?php _e('Update'); ?>"  />
+                </form>
+
+                <br>
+                
                 <h3>Button Text</h3>
 
                 <p>Please enter the text you want to display on the button <small>(ex: Buy Me)</small></p>
@@ -212,9 +241,7 @@ if($_POST[$btn]) {
                     deleteDataMany('img-print-btn-postions-update', $_POST['delete']);
 
                     doData('img-print-btn-postions-save', 'insert-or-update', 'img-print-btn-postions', 'img-print-btn-postions', $_POST['img-print-btn-postions'], 'img-print-btn-postio');
-
-
-                    $page2 = get_page_by_path("img-print-btn-postions", OBJECT, "img-print-btn-postio");
+					$page2 = get_page_by_path("img-print-btn-postions", OBJECT, "img-print-btn-postio");
 
 
 

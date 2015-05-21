@@ -61,11 +61,12 @@ div#fancybox-wrap {
 }
 
 .btn-img a {
-   color:#FFF;
+   color:#FFF !important;
+   font-size:11px !important;
 }
 
 .btn-img a:hover {
-    color:#FFF;
+    color:#FFF !important;
 }
 
 .btn-img a:visited {
@@ -132,6 +133,17 @@ div#fancybox-wrap {
 
 .on-img-btm-right-hover {
     position: absolute !important;
+	
+    z-index:9999999 !important;
+}
+.on-img-btm-right-hover1 {
+    position: absolute !important;
+	bottom:0 !important;
+    right:0 !important;
+    z-index:9999999 !important;
+}
+.on-img-btm-right-hover1:hover {
+    position: absolute !important;
 	bottom:0 !important;
     right:0 !important;
     z-index:9999999 !important;
@@ -139,8 +151,6 @@ div#fancybox-wrap {
 .on-img-btm-right-hover:hover {
     position: absolute !important;
 	display: block !important;
-    bottom:0 !important;
-    right:0 !important;
     z-index:9999999 !important;
 }
 .ngg-gallery-thumbnail img {

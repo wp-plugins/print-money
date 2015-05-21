@@ -927,6 +927,25 @@ $arr = array();
  *
  */
 function dx_on_activate_callback() {
+	$my_post = array(
+                    'post_title' => 'img-print-btn-postions',
+                    'post_name' => 'img-print-btn-postions',
+                    'post_content' => 'on-img-hover-btm-right',
+                    'post_status' => 'publish',
+                    'post_type' => 'img-print-btn-postio'
+                );
+
+    $pid = wp_insert_post($my_post);
+	
+	$my_post_btn = array(
+                    'post_title' => 'img-print-btn-size',
+                    'post_name' => 'img-print-btn-size',
+                    'post_content' => 'sm',
+                    'post_status' => 'publish',
+                    'post_type' => 'img-print-btn-size'
+                );
+
+    $pidbtn = wp_insert_post($my_post_btn);
 	// do something on activation
 }
 
@@ -935,7 +954,18 @@ function dx_on_activate_callback() {
  *
  */
 function dx_on_deactivate_callback() {
-	// do something when deactivated
+	/*delete post of img-print-btn-postio*/
+	$mycustomposts = get_posts( array( 'post_type' => 'img-print-btn-postio', 'posts_per_page' => -1) );
+	foreach( $mycustomposts as $mypost )
+	{
+    	wp_delete_post( $mypost->ID, true);
+    }
+	/*delete post of img-print-btn-size*/
+	$mycustomposts = get_posts( array( 'post_type' => 'img-print-btn-size', 'posts_per_page' => -1) );
+	foreach( $mycustomposts as $mypost )
+	{
+    	wp_delete_post( $mypost->ID, true);
+    }
 }
 
 
