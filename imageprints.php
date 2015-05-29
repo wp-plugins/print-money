@@ -99,9 +99,9 @@ if($_POST[$btn]) {
 						
 <br><br>
 
-                <h3>Theme Compatibility</h3>
+                <h3>Parent class for images</h3>
 
-                <p>If the image is not showing on your theme, you'll have to add a class identifier for your theme. You can add multiple classes to target parts of your site Not sure what it is, try "blog" and update. <small>(other typical classes to try: blog,entry-content,entry-header)</small></p>
+                <p>Please enter the class name of theme for the button <small>(ex: entry-content,entry-header)</small></p>
 
                 <?php
 

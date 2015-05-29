@@ -164,6 +164,7 @@ jQuery.noConflict();
                                 var nexgenGallery = $(document).find('.ngg-galleryoverview');
 
                                 var imgs = $(".ngg-galleryoverview").find(".ngg-gallery-thumbnail-box").find("a");
+								
 
                             }
 							else if(imgContainerClassesSplit[imgConClassesCount] == "justified-image-grid") {
@@ -211,31 +212,27 @@ jQuery.noConflict();
 
                     $.each(imgs, function (key, value) {
 						
-                        if(nexgenGallery) {
-
+                        if(nexgenGallery)
+						{
+                            var imgSrc = $(this).attr('data-src');
+					    }
+						else if (justifiedImageGrid)
+						{
                             var imgSrc = $(this).find("img").attr('src');
-
                         }
-						else if (justifiedImageGrid) {
-
-                            var imgSrc = $(this).find("img").attr('src');
-                        }
-						else if (entryContent) {
-
-                            var imgSrc = $(this).attr('src');
-							
-                        }
+						else if (entryContent)
+						{
+                            var imgSrc = $(this).parent('a').attr('href');
+						}
 						else if(postthumbnail)
 						{
-							var imgSrc = $(this).attr('src');
-							
-						} else {
-							
-                           var imgSrc = $(this).attr('src');
-						   
-						  
-                        }
- 
+							var imgSrc = $(this).parent('a').attr('data-src');
+						}
+						else
+						{
+							var imgSrc = $(this).parent('a').attr('href');
+						}
+						
 //encoding problem needs to be solved here
                         var html = "<div class='btn-img " + btnSize + "-btn-img'><a href='" + url + "?imgURL=" + encodeURIComponent(imgSrc) + "&returnURL=" + returnURL + "&affiliateID=" + affiliateID + "'> <img src='" + imgSrc + "'> <span>" + btnText + "</span> </a></div>";
 						if (btnPosition == "above-img") {
@@ -380,7 +377,10 @@ jQuery.noConflict();
                                     if (entryContent) {
 										
 										var p = $(this);
-									  $(this).parent('a').find(".btn-img").css("height", '25px');
+										$(this).parent().width();
+										var position = p.position();
+										
+									    $(this).parent('a').find(".btn-img").css("height", '25px');
 										var imgw=$(".btn-img").css('width');
 										var pimagewhalf=parseInt(this.width/2);
 										var pimagehhalf=parseInt(this.height/2);

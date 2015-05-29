@@ -77,6 +77,26 @@ class DX_Plugin_Base {
 
             return $user_role;
         }
+		function modify_post_thumbnail_html($html, $post_id, $post_thumbnail_id, $size, $attr)
+		{
+
+			$id = get_post_thumbnail_id(); // gets the id of the current post_thumbnail (in the loop)
+			$src = wp_get_attachment_image_src($id, $size); // gets the image url specific to the passed in size (aka. custom image size)
+			$srcfull = wp_get_attachment_image_src($id,'full');
+			$alt = get_the_title($id); // gets the post thumbnail title
+		
+			// Check to see if a 'retina' class exists in the array when calling "the_post_thumbnail()", if so output different <img/> html
+			
+			
+			$html = '<a href="javascript:void(0);" data-src="'.$srcfull[0].'"><img src="' . $src[0] . '" alt="' . $alt . '" class="' . $class . '" /></a>';
+			
+		
+			return $html;
+		}
+    	add_filter('post_thumbnail_html', 'modify_post_thumbnail_html', 99, 5);
+
+
+
 
         add_action('wp_head',  'pluginname_ajaxurl' );
 

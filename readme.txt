@@ -1,10 +1,10 @@
 === Print Money ===
-Contributors: David Ahmad, DotPhoto
+Contributors: David Ahmad
 Tags: Image Prints, Canvas Prints, Monetize your images, prints, mousepad prints, keychain prints, image printer, WordPress images, WordPress monetization, WordPress money
 
 Requires at least: 3.0
-Tested up to: 4.2.2
-Stable tag: 1.7
+Tested up to: 4.1.2
+Stable tag: 1.8
 License: GPLv2 or later
 
 Earn more money from your site by adding a print button to any WordPress image to enable your users to buy prints and gifts.
