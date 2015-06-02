@@ -4,7 +4,7 @@ Tags: Image Prints, Canvas Prints, Monetize your images, prints, mousepad prints
 
 Requires at least: 3.0
 Tested up to: 4.1.2
-Stable tag: 1.9
+Stable tag: 1.91
 License: GPLv2 or later
 
 Earn more money from your site by adding a print button to any WordPress image to enable your users to buy prints and gifts.
