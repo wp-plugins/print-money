@@ -346,7 +346,7 @@ if($_POST[$btn]) {
                 </form><?php */?>
 
                 <br>
-                <h3>Change size of button</h3>
+              <?php /*?>  <h3>Change size of button</h3>
 <br>
 
                 <?php
@@ -407,7 +407,7 @@ if($_POST[$btn]) {
 
 
                 ?>
-
+<?php */?>
                 <h3>Button will appear on all pages except...</h3>
 <br>
                
@@ -472,7 +472,7 @@ if($_POST[$btn]) {
 
 
                 ?>
-
+ <br>
                 <h3>Button will appear on all categories except...</h3>
 <br>
                
