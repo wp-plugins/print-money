@@ -81,7 +81,7 @@ div#fancybox-wrap {
     height:24px !important;
     float:left;
 	margin:0px !important;
-	display:none;
+	display:none !important;
 }
 
 .sm-btn-img {
