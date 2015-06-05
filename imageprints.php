@@ -120,7 +120,7 @@ if($_POST[$btn]) {
 
                     <input type="hidden" name="ID" value="<?php echo $page->ID; ?>">
 
-                    <input type="text" name="img-print-btn-class" value="<?php echo $title->post_content; ?> " style="width:100%;">
+                    <input type="text" name="img-print-btn-class" input value="blog,entry-content" value="<?php echo $title->post_content; ?> " style="width:100%;">
                     <br><br>
                     <input class="button-primary" style="float:right;"  type="submit" name="save-img-print-btn-class" value="<?php _e('Update'); ?>"  />
                 </form>
@@ -148,7 +148,7 @@ if($_POST[$btn]) {
 
                     <input type="hidden" name="ID" value="<?php echo $page->ID; ?>">
 
-                    <input type="text" name="img-print-btn-txt" value="<?php echo $title->post_content; ?> " style="width:100%;">
+                    <input type="text" name="img-print-btn-txt" input value="Print Me" value="<?php echo $title->post_content; ?> " style="width:300px;">
                     <br><br>
                     <input class="button-primary" style="float:right;"  type="submit" name="save-img-print-btn-txt" value="<?php _e('Update'); ?>"  />
                 </form>
@@ -159,7 +159,7 @@ if($_POST[$btn]) {
 
 
 						
-							<h3>Button will show for everyone except...</h3>
+							<?php /*?><h3>Button will show for everyone except...</h3>
 <br>
                        
                         <?php
@@ -225,7 +225,7 @@ if($_POST[$btn]) {
 <br>
                         <input class="button-primary" style="float:right;" type="submit" name="img-print-btn-roles-update" value="<?php _e('Update'); ?>"  />
 
-                    </form> <!-- end of #dxtemplate-form -->
+                    </form> <!-- end of #dxtemplate-form --><?php */?>
 
                 <form  method="POST">
 
@@ -317,9 +317,9 @@ if($_POST[$btn]) {
                 <div class="clear"></div>
 
                 <br>
-                <h3>Add any custom CSS Tweaks below</h3>
+   <?php /*?>             <h3>Add any custom CSS Tweaks below</h3>
 
-              <br>
+              <br><?php */?>
 
                 <?php
 
@@ -334,7 +334,7 @@ if($_POST[$btn]) {
                 ?>
 
 
-                <form method="POST">
+               <?php /*?> <form method="POST">
 
                     <?php echo inorup($title); ?>
 
@@ -343,7 +343,7 @@ if($_POST[$btn]) {
                     <textarea name="custom-button-css" style="width:100%; height:100px;"><?php echo $titles->post_content; ?></textarea>
 <br><br>
                 <input class="button-primary" style="float:right;"  type="submit" name="img-print-btn-css-save" value="<?php _e('Update'); ?>"  />
-                </form>
+                </form><?php */?>
 
                 <br>
                 <h3>Change size of button</h3>

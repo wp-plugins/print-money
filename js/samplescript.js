@@ -18,7 +18,7 @@ jQuery.noConflict();
         var btnPosition = "on-img-hover-btm-right";
         var btnUserRole,imgContainerClasses1,btnPages;
         var btnCats;
-		var btnClass;
+		var btnClass = "blog,entry-content";
         var customCSS;
 		var mytest=0;
 
