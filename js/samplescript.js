@@ -15,7 +15,7 @@ jQuery.noConflict();
 
         var btnText = "Print Me";
         var btnSize = "sm";
-        var btnPosition = "on-img-hover-btm-right";
+        var btnPosition = "on-img-btm-right-hover";
         var btnUserRole,imgContainerClasses1,btnPages;
         var btnCats;
 		var btnClass = "blog,entry-content";
@@ -211,7 +211,9 @@ jQuery.noConflict();
                     var i = 0;
 
                     $.each(imgs, function (key, value) {
-						
+                        $(this).removeClass('alignleft');			
+			$(this).removeClass('alignright');
+                        $(this).addClass('alignnone') 
                         if(nexgenGallery)
 						{
                             var imgSrc = $(this).attr('data-src');
@@ -349,9 +351,10 @@ jQuery.noConflict();
                             if (entryContent) {
 								
                                 $(".entry-content").css("position","relative");
+                                
                                 $(this).after(html);
-
-                                $('.entry-content').find(".btn-img").hide();
+                                
+                                //$('.entry-content').find(".btn-img").hide();
                             } 
 							else if (postthumbnail) {
                                 $(".post-thumbnail").css("position","relative");
@@ -369,6 +372,8 @@ jQuery.noConflict();
                                 $(".btn-img").hide();
 					        }
 
+                            $(".btn-img").css("visibility","hidden");
+                            $(".btn-img").css("padding","5px 10px");
 
                             $(this).hover(
 							  function (e) {
@@ -410,6 +415,7 @@ jQuery.noConflict();
                                         var imgh=$(".btn-img").css('height');
 										
 										$(this).parent().find(".btn-img").addClass("on-img-btm-right-hover").css("margin-left", (pimagewhalf+(pimagewhalf-parseInt(imgw)))).show();
+                                                                                $(this).parent().find(".btn-img").css("visibility","visible");
 										$(".btn-img").css("margin-top", (pimagehhalf-(pimagehhalf+parseInt(imgh))));
 										//alert();
                                     }
