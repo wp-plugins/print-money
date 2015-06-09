@@ -38,7 +38,7 @@ If you have any compatibility issues, lets us know, and we'll work to add that t
 
 == Special Notes ==
 *Print Money adds a button that hovers over your photos, or specified by you. It does not have to show on every photo on your site, just pages you select. When users click on the button, they are sent to dotphoto.com to purchase recommended gifts and frames. 
-*You earn 15% of EVERY sale made from a user coming from your site!
+*You earn up to 85% of EVERY sale made from a user coming from your site!
 *Dotphoto.com manages all withdrawals and site earnings. There is no minimum withdrawal amount! Withdraw anytime.
 *Withdrawing cash is very easy, simply verify you are the site owner with DotPhoto.com and provide a PayPal address for payouts
 *When clicked your image is sent to dotphoto.com
