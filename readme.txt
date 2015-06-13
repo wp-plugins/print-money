@@ -11,12 +11,12 @@ Earn more money from your site by adding a print button to any WordPress image t
 
 == Description ==
 
-Add a hover button to any Word Press image to enable users to buy prints and photo gifts; Print Money pays site owners 15% of sales.
+Add a hover button to any WordPress image to enable users to buy prints and photos gifts; Print Money pays site owners up to 85% of the markup.
 
 * 10-Second installation, Preconfigured optimally for your site
 * An additional way to monetize your website, without getting in the way of normal business operations
 * By default, the button will appear when a user hovers over your image, and prompts them to convert your images into monetization printable images. 
-* Ability to customize the button location and appearance.
+* Automatic tracking of sites sales
 * Ability to prevent where and who sees the button
 * Track how many clicks the buttons are getting. 
 * Monetize your images! Turn them into gifts, prints, magnets, frames and more with 1 click!
