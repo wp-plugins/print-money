@@ -4,7 +4,15 @@ jQuery.noConflict();
 (function( $ ) {
     'use strict';
     $( document ).ready(function() {
-
+	$(window).load(function(e) {
+        if(!$('.ngg-gallery-slideshow-image').length == 0) {
+			var imgpos = $('.ngg-gallery-slideshow-image img').position();
+			$('.ngg-gallery-slideshow-image .btn-img').css({
+				'position' : 'absolute',
+				'left' : imgpos.left+'px'
+			});
+		}
+    });
         var url = "http://www.dotphoto.com/WPLand.asp";
 	    var returnURL = encodeURIComponent(document.location.href);
         var affiliateID = encodeURIComponent(document.location.host);
@@ -144,6 +152,7 @@ jQuery.noConflict();
 
                         return false;
                     }
+
                     $(btnCats).each(function() {
 
                         if(currentCat == '') {
@@ -353,7 +362,7 @@ jQuery.noConflict();
                                 $(".entry-content").css("position","relative");
                                 
                                 $(this).after(html);
-                                
+								
                                 //$('.entry-content').find(".btn-img").hide();
                             } 
 							else if (postthumbnail) {
@@ -457,4 +466,5 @@ jQuery.noConflict();
         });
     });
 	 });
+	
 })(jQuery);

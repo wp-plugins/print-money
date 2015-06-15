@@ -4,7 +4,7 @@ Tags: Image Prints, Canvas Prints, Monetize your images, prints, mousepad prints
 
 Requires at least: 3.0
 Tested up to: 4.2.2
-Stable tag: 1.93
+Stable tag: 1.95
 License: GPLv2 or later
 
 Earn more money from your site by adding a print button to any WordPress image to enable your users to buy prints and gifts.
@@ -18,8 +18,8 @@ Add a hover button to any WordPress image to enable users to buy prints and phot
 * By default, the button will appear when a user hovers over your image, and prompts them to convert your images into monetization printable images. 
 * Automatic tracking of sites sales
 * Ability to prevent where and who sees the button
-* Track how many clicks the buttons are getting. 
-* Monetize your images! Turn them into gifts, prints, magnets, frames and more with 1 click!
+* Monetize your images! Turn them into gifts, prints, magnets, frames and more with 1 click
+* Compatible with NexGen Gallery, Justified Grid, Blog Posts and pages
 
 
 == Installation ==
@@ -70,17 +70,17 @@ You can change the text in the settings. If you wish to change the actual appear
 
 Click the link at the top right of the setting View/Withdraw Your Earnings. From that link, set up your free account, check your withdrawal limit.
 
-= Can I make more (or less) than 15%? =
+= Can I make more (or less) than 85%? =
 
-You earn exactly 15% per sale from your site, based on the type of product that your user decided to buy. Some product prints are more valuable than others, resulting in bigger sales for you. 
+You earn up to 85% per sale from your site, based on the type of product that your user decided to buy. Some product prints are more valuable than others, resulting in bigger sales for you. 
 
 = The button is not showing for us? =
 
 Please contact daveaite@gmail.com and describe your issue further.
 
-= How did you determine 15% to admins? =
+= How did you determine 85% to admins? =
 
-We price the products low and affordable for users to get their prints. 15% is a large chunk of the earnings when a majority of the cost goes to the creation of the actual print, shipping, developer and operational costs.
+We price the products low and affordable for users to get their prints. 85% is a large chunk of the earnings when a majority of the cost goes to the creation of the actual print, shipping, developer and operational costs.
 
 = Can I earn a lot? =
 
