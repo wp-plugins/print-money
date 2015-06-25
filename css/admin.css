@@ -45,6 +45,17 @@
 }
 
 /* ------------------------------ HELP PAGE ------------------------------ */
+.dx-help-page section {
+	margin-top:2em;
+	border-bottom:1px solid #999;
+	padding-bottom:2em;
+}
+.dx-help-page section:after {
+	display:block;
+	content:" ";
+	clear:both;
+	height:0;
+}
 .dx-help-page ::selection {
 	color: #fff;
 	background: #66d344;
@@ -60,7 +71,7 @@
 }
 
 .dx-help-page p {
-	line-height: 2em;
+
 }
 
 .dx-help-page img {
@@ -94,7 +105,7 @@
 }
 
 .dx-help-page .page-welcome {
-	margin: 0 0 40px 0;
+	margin: 0 0 29px 0;
 	padding: 10px;
 	/*border-bottom: 1px solid #f0f0f0;*/
 	background: #66d344;

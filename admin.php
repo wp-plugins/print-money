@@ -1,0 +1,135 @@
+
+<?php 
+	$settings = get_option('printmoney_settings',true);
+	if ( $_POST['img-print-btn-cats-update'] ) {
+
+		$container = explode(',',$_POST['container']);
+		$_POST['container'] = $container;
+		update_option('printmoney_settings',$_POST);
+		
+		wp_redirect(admin_url('?page=print-money&success'));
+		exit();
+	}
+	
+?>
+<div class="wrap">
+	<?php if ( isset($_GET['success']) ) : ?>
+	<div class="updated settings-error" id="setting-error-settings_updated"> 
+<p><strong>Settings saved.</strong></p></div>
+	<?php endif; ?>
+    
+	<form method="POST">
+		<div class="dx-help-page">
+		<div class="content alignleft">
+
+			<h2 class='page-welcome'>Print Money <span>Plugin</span></h2>
+			<div id="dx-help-content">
+
+			<h2><?php _e( "Let's get started", 'dxbase' ); ?></h2>
+						
+
+			<section>
+            <h3>Custom Image Selector - Theme Compatibility</h3>
+            <p>If the image is not showing on your theme, you'll have to add a class identifier for your theme. You can add multiple classes to target parts of your site Not sure what it is, try "blog" and update. <small>(other typical classes to try: blog,entry-content,entry-header)</small></p>
+            <input type="text" style="width:90%;" value="<?php echo implode(',',$settings['container']) ?>" input="" name="container">
+            <input class="button-primary" type="submit" value="Update" name="img-print-btn-cats-update" style="float:right;">
+			</section>
+            
+            <section>   
+            <h3>Button Text</h3>
+            <p>Please enter the text you want to display on the button <small>(ex: Buy Me)</small></p>
+            <input type="text" style="width:90%;" value="<?php echo $settings['button_text'] ?>" name="button_text">
+            <input class="button-primary" type="submit" value="Update" name="img-print-btn-cats-update" style="float:right;">
+            </section>  
+            
+            <section>      
+				<h3>Affiliate ID</h3> 
+                <p>Please enter the affiliate ID <small>(ex: www.printme.com)</small></p>
+                <input type="text" style="width:90%;" placeholder="<?php echo site_url(); ?>" value="<?php echo $settings['affliateID'] ?>" input="" name="affliateID">
+            	<input class="button-primary" type="submit" value="Update" name="img-print-btn-cats-update" style="float:right;">
+            </section>
+            <section>      
+				<h3>Return Page</h3> 
+                <p>Please enter the return page <small>(ex: www.printme.com)</small></p>
+                <input type="text" style="width:90%;" placeholder="<?php echo site_url(); ?>" value="<?php echo $settings['return_url'] ?>" name="return_url">
+            	<input class="button-primary" type="submit" value="Update" name="img-print-btn-cats-update" style="float:right;">
+            </section>
+            
+            <section>      
+				<h3>Set where the button should appear</h3> <br />
+                <input type="radio" name="position" value="top-left" <?php echo $settings['position'] == 'top-left' ? 'checked="checked"' : '' ?> />Top Left &nbsp;&nbsp;
+                <input type="radio" name="position" value="top-right" <?php echo $settings['position'] == 'top-right' ? 'checked="checked"' : '' ?>/>Top Right  &nbsp;&nbsp;
+                <input type="radio" name="position" value="bottom-left" <?php echo $settings['position'] == 'bottom-left' ? 'checked="checked"' : '' ?>/>Bottom Left &nbsp;&nbsp;
+                <input type="radio" name="position" value="bottom-rigt" <?php echo $settings['position'] == 'bottom-rigt' ? 'checked="checked"' : '' ?>/>Bottom Right &nbsp;&nbsp;
+				<input class="button-primary" type="submit" value="Update" name="img-print-btn-cats-update" style="float:right;">
+            </section>
+            
+            
+            
+            <section>
+            	<h3>Button will appear on all pages except...</h3>
+ 				<ul>
+				<?php 
+					$new_query = new WP_Query(array(
+						'post_type' => 'page',
+						'posts_per_page' => -1
+					));
+					
+					if ( $new_query->have_posts() ) :
+						while( $new_query->have_posts() ) : $new_query->the_post();
+							$settings['epage'] = !is_array($settings['epage']) ? array() : $settings['epage'];
+							$checked =  in_array(get_the_ID(),$settings['epage']) ? 'checked="checked"' : '';
+							echo '<li><input type="checkbox" value="'.get_the_ID().'" name="epage[]" '.$checked.'>'.get_the_title().'</li>';
+						endwhile;
+					endif; wp_reset_postdata();
+				?>
+                </ul>
+                <input class="button-primary" type="submit" value="Update" name="img-print-btn-cats-update" style="float:right;">
+                <div style="clear:both"></div>
+            </section>  
+            
+            <section>
+            <h2>PrintMoney Stats</h2>
+
+<p>Track how many times a button has been clicked for an image. This doesn't mean sales but shows how well your buttons are performing click wise. Larger Images size are more acceptable prints.</p>
+
+<div><h3>View/Withdraw Your <a href='http://www.dotphoto.com/WPLand.asp?affiliateID=<?php echo site_url(); ?>&action=claim'>Earnings</a></h3></div><br />
+            <table class="widefat">
+                <thead>
+                <tr>
+                    <th>Image URL</th>
+                    <th>Affiliate ID</th>
+                    <th>Clicked Count</th>
+                </tr>
+                </thead>
+                <tbody>
+                <?php
+                $args=array(
+                    'post_type' => 'image_count',
+                    'post_status' => 'publish',
+                    'posts_per_page' => -1,
+                );
+				
+                $my_query = new WP_Query($args);
+                if( $my_query->have_posts() ) {
+                    while ($my_query->have_posts()) : $my_query->the_post(); 
+						$datas = explode('|',get_the_content());
+					?>
+                        <tr>
+                            <td><a href="<?php the_title(); ?>" target="_blank"><?php the_title(); ?></a></td>
+                            <td><?php echo $datas[0] ?></td>
+                            <td><?php echo $datas[1] ?></td>
+                        </tr>
+                    <?php
+                    endwhile;
+                }
+                wp_reset_query();  // Restore global post data stomped by the_post().
+                ?>
+
+
+                </tbody>
+            </table>
+		</div>
+	</div>
+	
+</form></div>
