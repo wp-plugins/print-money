@@ -44,7 +44,7 @@ jQuery(document).ready(function($) { console.log(pm_settings);
 		var parent = $(this).parent('.print-money-wrapper'); 
 
 		$.post( click_count.url, { img_url:parent.find('img').attr('src'), current_url: currenturl });
-		window.open(url, '_blank');
+		window.open(url, '_self');
 	});
 	
 });
