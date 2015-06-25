@@ -22,8 +22,8 @@ jQuery(document).ready(function($) { console.log(pm_settings);
 			console.log(imgHeight);
 			var pmUrl = url+'?imgURL='+imgURL+'&returnURL='+returnURL+'&affiliateID='+affiliateID;
 			var button = '<i class="btn-img '+position+'" data-href="'+pmUrl+'">'+button_text+'</i>';
-        	$(this).wrap('<b class="print-money-wrapper '+imgClass+'" style="height:'+imgHeight+'px;"></b>');   
-			$(button).insertAfter(this);
+        	$(this).wrap('<b class="print-money-wrapper '+imgClass+'"></b>');   
+			$(button).insertBefore(this);
         });
 	}); 
 	

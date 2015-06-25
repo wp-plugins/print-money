@@ -89,11 +89,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 .jig-imageContainer .print-money-wrapper  {
 	display:block;
 	width:100% !important;
+	height:100% !important;
 }
 
 
 @media screen and (max-width:360px) {
 	.print-money-wrapper {
 		height:auto !important;
+		text-align:left;
+	}
+	.btn-img {
+		display:inline-block !important;
+		position:static !important;
 	}
 }
