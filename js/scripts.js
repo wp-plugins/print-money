@@ -13,7 +13,7 @@ jQuery(document).ready(function($) { console.log(pm_settings);
 	$.each(container,function( index, className ) {
   		var content = $('.'+className);
 		content.find('img').each(function(index, element) {
-			$(this).removeAttr('class');
+			
 			var parentLink = $(this).parent('a');
 			var imgURL = parentLink[0] ? parentLink.attr('href') : $(this).attr('src');
 			var imgClass = $(this).attr('class');
@@ -24,6 +24,7 @@ jQuery(document).ready(function($) { console.log(pm_settings);
 			var button = '<i class="btn-img '+position+'" data-href="'+pmUrl+'">'+button_text+'</i>';
         	$(this).wrap('<b class="print-money-wrapper '+imgClass+'"></b>');   
 			$(button).insertBefore(this);
+			$(this).removeAttr('class');
         });
 	}); 
 	

@@ -20,7 +20,7 @@ function myplugin_activate() {
 	$default = array(
 		'container' => array('entry-content'),
 		'button_text' => 'Print Me',
-		'position' => 'bottom-left',
+		'position' => 'top-left',
 		'epage' => array(),
 		'return_url' => site_url(),
 		'affliateID' => site_url(),

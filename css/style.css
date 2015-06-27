@@ -2,7 +2,7 @@
 
 /* Sample CSS styles below */
 .print-money-wrapper {
-	display:inline-block !important;
+	display:inline-block;
 	position:relative !important;
 	padding:0 !important;
 }
@@ -14,22 +14,13 @@
 	position:absolute !important;
 	z-index:9999 !important;
 	padding:5px 10px !important;
-	background: #ffffff; /* Old browsers */
-background: -moz-linear-gradient(top,  #ffffff 0%, #f8f8f8 48%, #f8f8f8 48%, #e8e8e8 93%, #e8e8e8 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(48%,#f8f8f8), color-stop(48%,#f8f8f8), color-stop(93%,#e8e8e8), color-stop(100%,#e8e8e8)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top,  #ffffff 0%,#f8f8f8 48%,#f8f8f8 48%,#e8e8e8 93%,#e8e8e8 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top,  #ffffff 0%,#f8f8f8 48%,#f8f8f8 48%,#e8e8e8 93%,#e8e8e8 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top,  #ffffff 0%,#f8f8f8 48%,#f8f8f8 48%,#e8e8e8 93%,#e8e8e8 100%); /* IE10+ */
-background: linear-gradient(to bottom,  #ffffff 0%,#f8f8f8 48%,#f8f8f8 48%,#e8e8e8 93%,#e8e8e8 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e8e8e8',GradientType=0 ); /* IE6-9 */
-
-    border: 1px #c1c1c1;
-    border-radius: 4px;
-    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.2);
+	background: #000; /* Old browsers */
+    opacity: .80;
+  
     box-sizing: border-box;
     clear: both !important;
-    color: #000 !important;
-	  text-shadow: 1px 1px 0 #fff;
+    color: #fff !important;
+	  text-shadow: 1px 1px 0 #000;
     cursor: pointer !important;
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 11px !important;
@@ -40,17 +31,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 	
 }
 .btn-img:hover {
-border: 1px #c1c1c1;
-	color:#000;
-	  text-shadow: 1px 1px 0 #fff;
-	background: #ffffff; /* Old browsers */
-background: -moz-linear-gradient(top,  #ffffff 0%, #e0e0e0 50%, #d6d6d6 93%, #d6d6d6 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(50%,#e0e0e0), color-stop(93%,#d6d6d6), color-stop(100%,#d6d6d6)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top,  #ffffff 0%,#e0e0e0 50%,#d6d6d6 93%,#d6d6d6 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top,  #ffffff 0%,#e0e0e0 50%,#d6d6d6 93%,#d6d6d6 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top,  #ffffff 0%,#e0e0e0 50%,#d6d6d6 93%,#d6d6d6 100%); /* IE10+ */
-background: linear-gradient(to bottom,  #ffffff 0%,#e0e0e0 50%,#d6d6d6 93%,#d6d6d6 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d6d6d6',GradientType=0 ); /* IE6-9 */
+	color:#fff;
+	 text-shadow: 1px 1px 0 #000;
+	background: #000; /* Old browsers */
+    opacity: .80;
 
 }
 .print-money-wrapper:hover > .btn-img  {
