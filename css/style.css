@@ -5,8 +5,10 @@
 	display:inline-block;
 	position:relative !important;
 	padding:0 !important;
+	max-width:100%;
 }
 .print-money-wrapper img {
+	margin:0;
 	padding:0 !important;
 }
 .btn-img {
@@ -67,6 +69,15 @@
 .ngg-gallery-thumbnail .print-money-wrapper img {
 	margin:0 !important;
 	padding:0 !important;
+	border:none;
+}
+.ngg-gallery-thumbnail .print-money-wrapper{
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(169, 169, 169);
+    display: block;
+    margin: 4px 0 4px 4px;
+    padding: 4px;
+    position: relative;
 }
 
 /* JIG GALLERY SETTINGS */
@@ -74,6 +85,32 @@
 	display:block;
 	width:100% !important;
 	height:100% !important;
+}
+
+/* Fix Alignment */
+.print-money-wrapper.aligncenter {
+	overflow:hidden;
+	display:block;
+	margin:10px auto;
+}
+.print-money-wrapper.alignleft {
+	display:inline-block;
+	margin-top:10px;
+	margin-bottom:10px;
+	margin-right:10px;
+	float:left;
+}
+.print-money-wrapper.alignright {
+	display:inline-block;
+	margin-top:10px;
+	margin-bottom:10px;
+	margin-left:10px;
+	float:right;
+}
+.print-money-wrapper.alignnone {
+	display:inline-block;
+	margin-top:10px;
+	margin-bottom:10px;
 }
 
 

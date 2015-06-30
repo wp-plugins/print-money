@@ -5,7 +5,7 @@
  * Plugin URI: http://dotphoto.com
  * Author: David Ahmad
  * Author URI: http://vbsocial.com
- * Version: 2.1
+ * Version: 2.2
  * Text Domain: Print-Money
  * License: GPL2
  * Copyright 2015 David Ahmad
@@ -24,6 +24,10 @@ function myplugin_activate() {
 		'epage' => array(),
 		'return_url' => site_url(),
 		'affliateID' => site_url(),
+		'image_protection_visitors' => true,
+		'image_protection_users' => true,
+		'button_text_color' => '#ffff',
+		'button_bg_color'   =>  '#0000'
 	);
 	update_option('printmoney_settings',$default);
 }
@@ -39,9 +43,14 @@ function register_scripts() {
 		wp_enqueue_script( 'printmoney-script',  PLUGIN_URL . 'js/scripts.js', array( 'jquery' ));
 		wp_enqueue_style( 'printmoney-style', PLUGIN_URL . 'css/style.css', 20, null );
 		
-		// Localize the script with new data
+		if ( wp_get_theme() == 'Twenty Fourteen' ) {
+			wp_enqueue_style( 'printmoney-style-twentyfourteen', PLUGIN_URL . 'template-css/twentyfourteen.css', 20, null );
+		}
+		// Localize the script 
+		
 		wp_localize_script( 'printmoney-script', 'pm_settings', $settings );
 		wp_localize_script( 'printmoney-script', 'click_count', array('url'=>PLUGIN_URL . 'click-count.php' ));
+		wp_localize_script( 'printmoney-script', 'is_user_logged_in', array('status'=> is_user_logged_in() ? 1 : 0 ));
 	}
 }
 
@@ -52,6 +61,10 @@ add_action( 'wp_enqueue_scripts', 'register_scripts' );
 ------------------------------------------------------------*/
 function load_custom_wp_admin_style() {
        wp_enqueue_style( 'printmoney-admin-style', PLUGIN_URL . '/css/admin.css', array(), null );
+	   wp_enqueue_script( 'jquery-admin', PLUGIN_URL . '/js/jquery.js', array(), null );
+	   wp_enqueue_script( 'raphael', PLUGIN_URL . '/js/raphael.js', array( 'jquery-admin'), null );
+	   wp_enqueue_script( 'colorwheel', PLUGIN_URL . '/js/colorwheel.js', array( 'jquery-admin'), null );
+	   wp_enqueue_script( 'printmoney-admin-script', PLUGIN_URL . '/js/admin.js', array( 'jquery-admin'), null );
 }
 add_action( 'admin_enqueue_scripts', 'load_custom_wp_admin_style' );
 

@@ -238,3 +238,11 @@
 		float: none;
 	}
 }
+.textcolorwheel,
+.bgcolorwheel {
+	text-align:center;
+}
+.textcolorwheel div,
+.bgcolorwheel div {
+	margin:0 auto !important;
+}

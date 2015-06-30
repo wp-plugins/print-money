@@ -21,7 +21,7 @@
 	<form method="POST">
 		<div class="dx-help-page">
 		<div class="content alignleft">
-
+            
 			<h2 class='page-welcome'>Print Money <span>Plugin</span></h2>
 			<div id="dx-help-content">
 
@@ -36,10 +36,26 @@
 			</section>
             
             <section>   
-            <h3>Button Text</h3>
+            <h3>Button Options</h3>
             <p>Please enter the text you want to display on the button <small>(ex: Buy Me)</small></p>
             <input type="text" style="width:90%;" value="<?php echo $settings['button_text'] ?>" name="button_text">
             <input class="button-primary" type="submit" value="Update" name="img-print-btn-cats-update" style="float:right;">
+            
+            <table cellpadding="10">
+            	<tr>
+                	<td>
+                    	 <h3> Button Text Color </h3><br />
+            			  <div class="textcolorwheel"><div></div><input type="text" name="button_text_color" value="<?php echo $settings['button_text_color'] ?>"/></div>
+                    </td>
+                    <td>
+                    	<h3> Button Background Color </h3><br />
+            			<div class="bgcolorwheel"><div></div><input type="text" name="button_bg_color" value="<?php echo $settings['button_bg_color'] ?>"/></div>
+                    </td>
+                </tr>
+            </table>
+           
+            
+            
             </section>  
             
             <section>      
@@ -87,6 +103,14 @@
                 <input class="button-primary" type="submit" value="Update" name="img-print-btn-cats-update" style="float:right;">
                 <div style="clear:both"></div>
             </section>  
+            
+            <section>
+            	<h3>Image Protection</h3>
+                <br />
+                <input type="checkbox" name="image_protection_visitors" value="1" <?php echo $settings['image_protection_visitors'] == 1 ? 'checked="checked"' : '' ?> /> Protect Image from Visitors &nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" name="image_protection_users" value="1" <?php echo $settings['image_protection_users'] == 1 ? 'checked="checked"' : '' ?> /> Protect Image from Logged-in Users                
+            	<input class="button-primary" type="submit" value="Update" name="img-print-btn-cats-update" style="float:right;">
+            </section>
             
             <section>
             <h2>PrintMoney Stats</h2>
