@@ -4,7 +4,7 @@ Tags: Image Prints, Canvas Prints, Monetize your images, prints, mousepad prints
 
 Requires at least: 3.0
 Tested up to: 4.2.2
-Stable tag: 2.2
+Stable tag: 2.3
 License: GPLv2 or later
 
 Earn more money from your site by adding a print button to any WordPress image to enable your users to buy prints and gifts.
@@ -20,6 +20,9 @@ Add a hover button to any WordPress image to enable users to buy prints and phot
 * Ability to prevent where and who sees the button
 * Monetize your images! Turn them into gifts, prints, magnets, frames and more with 1 click
 * Compatible with NexGen Gallery, Justified Grid, Blog Posts and pages
+* Protect your images from drag and drop and right clicks
+* Customize the Print button to your needs
+
 
 
 == Installation ==

@@ -18,11 +18,9 @@
 	padding:5px 10px !important;
 	background: #000; /* Old browsers */
     opacity: .80;
-  
     box-sizing: border-box;
     clear: both !important;
-    color: #fff !important;
-	  text-shadow: 1px 1px 0 #000;
+    color: #fff ;
     cursor: pointer !important;
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 11px !important;
@@ -34,7 +32,6 @@
 }
 .btn-img:hover {
 	color:#fff;
-	 text-shadow: 1px 1px 0 #000;
 	background: #000; /* Old browsers */
     opacity: .80;
 

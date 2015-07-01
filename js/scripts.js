@@ -73,12 +73,18 @@ jQuery(document).ready(function($) { console.log(pm_settings);
 		$('img').bind("mousedown",function(e){
 			return false;
 		});
+		$('img').bind("click",function(e){
+				return false;
+		});
 	} else if ( user_logged_in == 1 && image_protection_users == 1 ) {
 		$('img').bind("contextmenu",function(e){
 				return false;
 		});
 		$('img').bind("mousedown",function(e){
 			return false;
+		});
+		$('img').bind("click",function(e){
+				return false;
 		});
 	}
 	
