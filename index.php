@@ -5,7 +5,7 @@
  * Plugin URI: http://dotphoto.com
  * Author: David Ahmad
  * Author URI: http://vbsocial.com
- * Version: 2.3
+ * Version: 2.5
  * Text Domain: Print-Money
  * License: GPL2
  * Copyright 2015 David Ahmad
@@ -61,10 +61,12 @@ add_action( 'wp_enqueue_scripts', 'register_scripts' );
 ------------------------------------------------------------*/
 function load_custom_wp_admin_style() {
        wp_enqueue_style( 'printmoney-admin-style', PLUGIN_URL . '/css/admin.css', array(), null );
-	   wp_enqueue_script( 'jquery-admin', PLUGIN_URL . '/js/jquery.js', array(), null );
-	   wp_enqueue_script( 'raphael', PLUGIN_URL . '/js/raphael.js', array( 'jquery-admin'), null );
-	   wp_enqueue_script( 'colorwheel', PLUGIN_URL . '/js/colorwheel.js', array( 'jquery-admin'), null );
-	   wp_enqueue_script( 'printmoney-admin-script', PLUGIN_URL . '/js/admin.js', array( 'jquery-admin'), null );
+	   if ( isset($_GET['page']) && $_GET['page'] == 'print-money' ) {
+	   	wp_enqueue_script( 'jquery-admin', PLUGIN_URL . 'js/jquery.js', array(), null );
+	   }
+	   wp_enqueue_script( 'raphael', PLUGIN_URL . 'js/raphael.js', array( 'jquery-admin'), null );
+	   wp_enqueue_script( 'colorwheel', PLUGIN_URL . 'js/colorwheel.js', array( 'jquery-admin'), null );
+	   wp_enqueue_script( 'printmoney-admin-script', PLUGIN_URL . 'js/admin.js', array( 'jquery-admin'), null );
 }
 add_action( 'admin_enqueue_scripts', 'load_custom_wp_admin_style' );
 
