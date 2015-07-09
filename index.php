@@ -5,7 +5,7 @@
  * Plugin URI: http://dotphoto.com
  * Author: David Ahmad
  * Author URI: http://vbsocial.com
- * Version: 2.5
+ * Version: 2.6
  * Text Domain: Print-Money
  * License: GPL2
  * Copyright 2015 David Ahmad

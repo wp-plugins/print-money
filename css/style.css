@@ -85,8 +85,12 @@
 }
 
 /* Fix Alignment */
+.print-money-wrapper.alignnone {
+	display:inline-block;
+	margin-top:10px;
+	margin-bottom:10px;
+}
 .print-money-wrapper.aligncenter {
-	overflow:hidden;
 	display:block;
 	margin:10px auto;
 }
@@ -104,11 +108,7 @@
 	margin-left:10px;
 	float:right;
 }
-.print-money-wrapper.alignnone {
-	display:inline-block;
-	margin-top:10px;
-	margin-bottom:10px;
-}
+
 
 
 @media screen and (max-width:360px) {
