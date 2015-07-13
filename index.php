@@ -5,7 +5,7 @@
  * Plugin URI: http://dotphoto.com
  * Author: David Ahmad
  * Author URI: http://vbsocial.com
- * Version: 2.6
+ * Version: 2.7
  * Text Domain: Print-Money
  * License: GPL2
  * Copyright 2015 David Ahmad
@@ -18,7 +18,7 @@ define('PLUGIN_URL',plugin_dir_url( __FILE__ ));
 ------------------------------------------------------------*/
 function myplugin_activate() {
 	$default = array(
-		'container' => array('entry-content,entry-content,elements-box,thn_post_wrap,list-inline,blog,post'),
+		'container' => array('entry-content,elements-box,thn_post_wrap,list-inline,blog,post'),
 		'button_text' => 'Print Me',
 		'position' => 'top-left',
 		'epage' => array(),
