@@ -31,7 +31,7 @@
 			<section>
             <h3>Custom Image Selector - Theme Compatibility</h3>
             <p>If the image is not showing on your theme, you'll have to add a class identifier for your theme. You can add multiple classes to target parts of your site Not sure what it is, try "blog" and update. <small>(other typical classes to try: blog,entry-content,entry-header)</small></p>
-            <input type="text" style="width:90%;" value="<?php echo implode(',',$settings['container']) ?>" input="" name="container">
+            <input type="text" style="width:90%;" value="<?php echo implode(',',$settings['container']) ?>" input="entry-content,elements-box,thn_post_wrap,list-inline,blog,post" name="container">
             <input class="button-primary" type="submit" value="Update" name="img-print-btn-cats-update" style="float:right;">
 			</section>
             
