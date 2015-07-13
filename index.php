@@ -18,7 +18,7 @@ define('PLUGIN_URL',plugin_dir_url( __FILE__ ));
 ------------------------------------------------------------*/
 function myplugin_activate() {
 	$default = array(
-		'container' => array('entry-content','elements-box','thn_post_wrap','list-inline','blog,post'),
+		'container' => array("entry-content,elements-box,thn_post_wrap,list-inline,blog,post"),
 		'button_text' => 'Print Me',
 		'position' => 'top-left',
 		'epage' => array(),
