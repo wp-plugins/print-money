@@ -12,6 +12,12 @@
 	}
 	
 ?>
+<style type="text/css">
+<!--
+.style1 {color: #009900}
+-->
+</style>
+
 <div class="wrap">
 	<?php if ( isset($_GET['success']) ) : ?>
 	<div class="updated settings-error" id="setting-error-settings_updated"> 
@@ -24,17 +30,16 @@
             
 			<h2 class='page-welcome'>Print Money <span>Plugin</span></h2>
 			<div id="dx-help-content">
-
-			<h2><?php _e( "Let's get started", 'dxbase' ); ?></h2>
-						
+	
 
 			<section>
-            <h2>You are all setup! All your images are now monetizable!</h2>
-            <p>Currently this plugin is compatible with over 16,300,247 sites. If it doesn't work for your theme, no sweat - <a href="mailto:daveaite@gmail.com">Email us</a> the name of your theme  and we'll get you going within 24 hours.</small></p>
+            <h2><span class="style1">You are all setup!</span> All your images are now monetizable!</h2>
+            <p>Currently this plugin compatible with over 16,300,247 sites. If you don't see it when you hover over an image, no sweat - <a href="mailto:daveaite@gmail.com">Email us</a> the name of your theme  and we'll get you going within 24 hours.</small></p>
 			</section>
             
             <section>   
-            <h3>Additional Settings:Button Options</h3>
+            <h2>Additional Settings</h2>
+            <h3>Button Options</h3>
             <p>Please enter the text you want to display on the button <small>(ex: Buy Me)</small></p>
             <input type="text" style="width:90%;" value="<?php echo $settings['button_text'] ?>" name="button_text">
             <input class="button-primary" type="submit" value="Update" name="img-print-btn-cats-update" style="float:right;">
