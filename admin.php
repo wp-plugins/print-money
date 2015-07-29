@@ -29,14 +29,12 @@
 						
 
 			<section>
-            <h3>Custom Image Selector - Theme Compatibility</h3>
-            <p>If the image is not showing on your theme, you'll have to add a class identifier for your theme. You can add multiple classes to target parts of your site Not sure what it is, try "blog" and update. <small>(other typical classes to try: blog,entry-content,entry-header)</small></p>
-            <input type="text" style="width:90%;" value="<?php echo implode(',',$settings['container']) ?>" input="" name="container">
-            <input class="button-primary" type="submit" value="Update" name="img-print-btn-cats-update" style="float:right;">
+            <h2>You are all setup! All your images are now monetizable!</h2>
+            <p>Currently this plugin is compatible with over 16,300,247 sites. If it doesn't work for your theme, no sweat - <a href="mailto:daveaite@gmail.com">Email us</a> the name of your theme  and we'll get you going within 24 hours.</small></p>
 			</section>
             
             <section>   
-            <h3>Button Options</h3>
+            <h3>Additional Settings:Button Options</h3>
             <p>Please enter the text you want to display on the button <small>(ex: Buy Me)</small></p>
             <input type="text" style="width:90%;" value="<?php echo $settings['button_text'] ?>" name="button_text">
             <input class="button-primary" type="submit" value="Update" name="img-print-btn-cats-update" style="float:right;">
@@ -111,6 +109,14 @@
                 <input type="checkbox" name="image_protection_users" value="1" <?php echo $settings['image_protection_users'] == 1 ? 'checked="checked"' : '' ?> /> Protect Image from Logged-in Users                
             	<input class="button-primary" type="submit" value="Update" name="img-print-btn-cats-update" style="float:right;">
             </section>
+            
+            <section>
+            <h3>Advanced Settings - Manual Theme Compatibility</h3>
+            <p>If the image is not showing on your theme, you'll have to add a class identifier for your theme. You can add multiple classes to target parts of your site Not sure what it is, try "blog" and update. <small>(other typical classes to try: blog,entry-content,entry-header)</small></p>
+            <input type="text" style="width:90%;" value="<?php echo implode(',',$settings['container']) ?>" input="" name="container">
+            <input class="button-primary" type="submit" value="Update" name="img-print-btn-cats-update" style="float:right;">
+			</section>
+            
             
             <section>
             <h2>PrintMoney Stats</h2>
