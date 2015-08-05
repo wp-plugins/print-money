@@ -34,7 +34,7 @@
 
 			<section>
             <h2><span class="style1">You are all setup!</span> All your images are now monetizable!</h2>
-            <p>Currently this plugin compatible with over 16,300,247+ downloaded Wordpress themes. If you don't see it when you hover over an image, no sweat - <a href="mailto:daveaite@gmail.com">Email us</a> the name of your theme  and we'll get you going within 24 hours.</small></p>
+            <p>Currently this plugin is compatible with over 16,300,247+ downloaded Wordpress themes. If you don't see it when you hover over an image, no sweat - <a href="mailto:daveaite@gmail.com">Email us</a> the name of your theme  and we'll get you going within 24 hours.</small></p>
 			</section>
             
             <section>   
