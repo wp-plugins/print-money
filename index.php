@@ -5,7 +5,7 @@
  * Plugin URI: http://dotphoto.com
  * Author: David Ahmad
  * Author URI: http://vbsocial.com
- * Version: 3.3
+ * Version: 3.4
  * Text Domain: Print-Money
  * License: GPL2
  * Copyright 2015 David Ahmad
@@ -50,6 +50,7 @@ function register_scripts() {
 		
 		wp_localize_script( 'printmoney-script', 'pm_settings', $settings );
 		wp_localize_script( 'printmoney-script', 'click_count', array('url'=>PLUGIN_URL . 'click-count.php' ));
+		wp_localize_script( 'printmoney-script', 'fullsize_image', array('url'=>PLUGIN_URL . 'fullsize-image.php' ));
 		wp_localize_script( 'printmoney-script', 'is_user_logged_in', array('status'=> is_user_logged_in() ? 1 : 0 ));
 	}
 }
@@ -94,3 +95,4 @@ function codex_custom_init() {
     register_post_type( 'image_count', $args );
 }
 add_action( 'init', 'codex_custom_init' );
+

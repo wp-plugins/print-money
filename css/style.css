@@ -6,6 +6,7 @@
 	position:relative !important;
 	padding:0 !important;
 	max-width:100%;
+	background: url("../espelymiranda-loading-v03.gif") no-repeat scroll center center !important;;
 }
 .print-money-wrapper img {
 	margin:0;

@@ -25,7 +25,7 @@ jQuery(document).ready(function($) { console.log(pm_settings);
 			var imgHeight = $(this).innerHeight();
 			var imgWidth = $(this).innerWidth();
 			
-			var pmUrl = url+'?imgURL='+imgURL+'&returnURL='+returnURL+'&affiliateID='+affiliateID;
+			var pmUrl = url+'?returnURL='+returnURL+'&affiliateID='+affiliateID;
 			var button = '<i class="btn-img '+position+'" data-href="'+pmUrl+'">'+button_text+'</i>';
         	$(this).wrap('<b class="print-money-wrapper '+imgClass+'"></b>');   
 			$(button).insertBefore(this);
@@ -53,9 +53,15 @@ jQuery(document).ready(function($) { console.log(pm_settings);
 		var url = $(this).attr('data-href');
 		var currenturl  = window.location.href; 
 		var parent = $(this).parent('.print-money-wrapper'); 
-
-		$.post( click_count.url, { img_url:parent.find('img').attr('src'), current_url: currenturl });
-		window.open(url, '_self');
+		parent.find('img').css('opacity','.1');
+		$(this).text('Printing..').show();
+		$.post( click_count.url, { img_url:parent.find('img').attr('src'), current_url: currenturl },function(){
+			$.post( fullsize_image.url, { img_url:parent.find('img').attr('src') },function(data){
+			 var newUrl = url+'&imgURL='+data;
+			 window.open(newUrl, '_self');
+			});
+		});
+		
 	});
 	
 	/* Button Style */
