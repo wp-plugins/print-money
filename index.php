@@ -5,7 +5,7 @@
  * Plugin URI: http://dotphoto.com
  * Author: David Ahmad
  * Author URI: http://vbsocial.com
- * Version: 3.4
+ * Version: 3.5
  * Text Domain: Print-Money
  * License: GPL2
  * Copyright 2015 David Ahmad
@@ -26,8 +26,9 @@ function myplugin_activate() {
 		'affliateID' => site_url(),
 		'image_protection_visitors' => true,
 		'image_protection_users' => true,
-		'button_text_color' => '#ffff',
-		'button_bg_color'   =>  '#0000'
+		'button_text_color' => '#fff',
+		'button_bg_color'   =>  '#000',
+		'dimension' => array('400','400')
 	);
 	update_option('printmoney_settings',$default);
 }

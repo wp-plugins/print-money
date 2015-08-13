@@ -115,6 +115,14 @@
             	<input class="button-primary" type="submit" value="Update" name="img-print-btn-cats-update" style="float:right;">
             </section>
             
+             <section>
+            	<h3>Disable Button on image size below</h3>
+                <br />
+                Width <input type="text" name="dimension[]" value="<?php echo $settings['dimension'][0] ;?>" />  &nbsp;&nbsp
+                Height <input type="text" name="dimension[]" value="<?php echo $settings['dimension'][1] ;?>" />                
+            	<input class="button-primary" type="submit" value="Update" name="img-print-btn-cats-update" style="float:right;">
+            </section>
+            
             <section>
             <h3>Advanced Settings - Manual Theme Compatibility</h3>
             <p>If the image is not showing on your theme, you'll have to add a class identifier for your theme. You can add multiple classes to target parts of your site Not sure what it is, try "blog" and update. <small>(other typical classes to try: blog,entry-content,entry-header)</small></p>

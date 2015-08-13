@@ -1,5 +1,4 @@
 @CHARSET "UTF-8";
-
 /* Sample CSS styles below */
 .print-money-wrapper {
 	display:inline-block;
@@ -12,10 +11,14 @@
 	margin:0;
 	padding:0 !important;
 }
+img {
+	min-height:0 !important;
+	height:auto !important;
+}
 .btn-img {
-	display:none;
+	display:inline;
 	position:absolute !important;
-	z-index:9999 !important;
+	z-index:999999 !important;
 	padding:5px 10px !important;
 	background: #000; /* Old browsers */
     opacity: .80;

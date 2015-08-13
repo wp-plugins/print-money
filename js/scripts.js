@@ -12,62 +12,101 @@ jQuery(document).ready(function($) { console.log(pm_settings);
 	var image_protection_visitors = pm_settings['image_protection_visitors'];
 	var image_protection_users = pm_settings['image_protection_users'];
 	var user_logged_in = is_user_logged_in.status;
-		
-
-	/* Container Loop */
+	
+	/* Get All Container */
+	var content = new Array();
 	$.each(container,function( index, className ) {
-  		var content = $('.'+className);
-		content.find('img').each(function(index, element) {
-			
-			var parentLink = $(this).parent('a');
-			var imgURL = parentLink[0] ? parentLink.attr('href') : $(this).attr('src');
-			var imgClass = $(this).attr('class');
-			var imgHeight = $(this).innerHeight();
-			var imgWidth = $(this).innerWidth();
-			
-			var pmUrl = url+'?returnURL='+returnURL+'&affiliateID='+affiliateID;
-			var button = '<i class="btn-img '+position+'" data-href="'+pmUrl+'">'+button_text+'</i>';
-        	$(this).wrap('<b class="print-money-wrapper '+imgClass+'"></b>');   
-			$(button).insertBefore(this);
-			$(this).removeClass();
-			
-        });
+		if ( className != 'body' || className != 'html' ) {
+			content[index] = '.'+className;
+		} else {
+			content[index] = className;
+		}
 	}); 
-	/* Add Size */
-	$('.print-money-wrapper').each(function(index, element) {
-		 var imgwidth = $(this).find('img').attr('width');
-		 var imggheight = $(this).find('img').attr('height');
-		 $(this).css({ 'width':imgwidth+'px','height':imggheight+'px' });			
-    });
 	
-	/* Override Other Hover Function */
-	$('.print-money-wrapper').parent().hover(function(){
-		$(this).find('.btn-img').css('display','inline-block');
-	},function(){
-		$(this).find('.btn-img').css('display','none');
-	});
+	/* Return Image Full URL */
+	function full_url(img) {
+		var fimgsrc = img.attr('src');
+		var fullimg = fimgsrc.replace(/-\d+x\d+(?=\.(jpg|jpeg|png|gif)$)/i, '');
+		return fullimg;
+	}
 	
-	/* Override Other Function to Redirect */
-	$('.btn-img').click(function(event){
-		event.preventDefault();
-		var url = $(this).attr('data-href');
-		var currenturl  = window.location.href; 
-		var parent = $(this).parent('.print-money-wrapper'); 
-		parent.find('img').css('opacity','.1');
-		$(this).text('Printing..').show();
-		$.post( click_count.url, { img_url:parent.find('img').attr('src'), current_url: currenturl },function(){
-			$.post( fullsize_image.url, { img_url:parent.find('img').attr('src') },function(data){
-			 var newUrl = url+'&imgURL='+data;
-			 window.open(newUrl, '_self');
-			});
-		});
+	/* Add Class When Image size below */
+	$(content.join()).find('img').each(function(index, element) {	
+		var img = $(this);
 		
+		// Create new offscreen image to test
+		var theImage = new Image();
+		theImage.src = full_url(img);
+		// Add a reference to the original.
+		$(theImage).data("original",this);
+	
+		// Get accurate measurements from that.
+		$(theImage).load(function(){
+		   var fullwidth = theImage.width;
+		   var fullheight = theImage.height;
+		   
+		   if ( fullwidth <= 400 && fullheight <= 400 ) {
+				img.addClass('hide-button')
+		   } 
+		});	
 	});
 	
-	/* Button Style */
-	$('.btn-img').css({
-		'background':button_bg_color,
-		'color':button_text_color
+	
+	$(content.join()).find('img').hover(function(){
+		// Enable Button Above of the Image Size Restriction
+		if ( !$(this).hasClass('hide-button') ) {
+			var pos = $(this)[0];
+			var pmUrl = url+'?returnURL='+returnURL+'&affiliateID='+affiliateID+'&imgURL='+full_url($(this));
+			
+			/* Calculate Image Position */
+			// Top Left Default
+			var y = pos.offsetTop;
+			var x = pos.offsetLeft;
+				
+			var button = '<a href="'+pmUrl+'" class="btn-img" style="background:'+button_bg_color+'; position:absolute; top:'+y+'px; left:'+x+'px;  "><span style="color:'+button_text_color+' !important;">'+button_text+'</span></a>';
+			$(button).insertAfter($(this));	
+			
+			// Top Right
+			if ( position == 'top-right' ) {
+				x = (x + pos.offsetWidth) - $('.btn-img').innerWidth();
+				$('.btn-img').css({'left':x});
+			}
+			// Bottom Right
+			if ( position == 'bottom-rigt' ) {
+				x = (x + pos.offsetWidth) - $('.btn-img').innerWidth();
+				y = (y + pos.offsetHeight) - $('.btn-img').innerHeight();
+				$('.btn-img').css({'left':x,'top':y});
+			}
+			// Bottom Left
+			if ( position == 'bottom-left' ) {
+				y = (y + pos.offsetHeight) - $('.btn-img').innerHeight();
+				$('.btn-img').css({'top':y});
+			}
+			
+		}
+	},function(event){
+		// Enable Button Above of the Image Size Restriction
+		if ( !$(this).hasClass('hide-button') ) {
+			var target = event.relatedTarget;
+			if ( !$(target).hasClass('btn-img') ) {
+				$('.btn-img').remove();
+			} else {
+				$('.btn-img').mouseleave(function(){
+					$('.btn-img').remove();
+				});
+				
+				/* Override Other Function to Redirect */
+				$('.btn-img').click(function(event){
+					event.preventDefault();
+					var currenturl  = window.location.href; 
+					var url = $(this).attr('href');
+					$(this).text('printing...');
+					$.post( click_count.url, { img_url:url, current_url: currenturl },function(){
+						 window.open(url, '_self');
+					});
+				});
+			}
+		}
 	});
 	
 	
@@ -79,8 +118,9 @@ jQuery(document).ready(function($) { console.log(pm_settings);
 		$('img').bind("mousedown",function(e){
 			return false;
 		});
+		
 		$('img').bind("click",function(e){
-				return false;
+			return false;
 		});
 	} else if ( user_logged_in == 1 && image_protection_users == 1 ) {
 		$('img').bind("contextmenu",function(e){
@@ -94,60 +134,5 @@ jQuery(document).ready(function($) { console.log(pm_settings);
 		});
 	}
 	
-	
-	
-	function getcss (source) {
-    var dom = $(source).get(0);
-    var dest = {};
-    var style, prop;
-    if (window.getComputedStyle) {
-        var camelize = function (a, b) {
-                return b.toUpperCase();
-        };
-        if (style = window.getComputedStyle(dom, null)) {
-            var camel, val;
-            if (style.length) {
-                for (var i = 0, l = style.length; i < l; i++) {
-                    prop = style[i];
-                    camel = prop.replace(/\-([a-z])/, camelize);
-                    val = style.getPropertyValue(prop);
-                    dest[camel] = val;
-                }
-            } else {
-                for (prop in style) {
-                    camel = prop.replace(/\-([a-z])/, camelize);
-                    val = style.getPropertyValue(prop) || style[prop];
-                    dest[camel] = val;
-                }
-            }
-            return dest;
-        }
-    }
-    if (style = dom.currentStyle) {
-        for (prop in style) {
-            dest[prop] = style[prop];
-        }
-        return dest;
-    }
-    if (style = dom.style) {
-        for (prop in style) {
-            if (typeof style[prop] != 'function') {
-                dest[prop] = style[prop];
-            }
-        }
-    }
-    
-	var arr = ['margin'];
-	for ( dest in cstyle ) {
-		if ( $.inArray( cstyle[dest], arr ) ) {
-			dest[dest] = cstyle[dest];
-			consle.log(cstyle[dest]);
-		}
-	}
-	return dest;
-	
-};
-	
+
 });
-
-
