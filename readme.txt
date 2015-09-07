@@ -3,8 +3,8 @@ Contributors: David Ahmad
 Tags: Image Prints, print images, monetize wordpress,print button, image customization, image tweak, Monetize your images, prints,image printer, WordPress images, wordpress monetization,earn money, protect images, image lock, disable right click,image copyrights,image optimizer 
 
 Requires at least: 3.0
-Tested up to: 4.2.2
-Stable tag: 3.5
+Tested up to: 4.3
+Stable tag: 3.7
 License: GPLv2 or later
 
 Earn more money from your site by adding a print button to any WordPress image to enable your users to buy prints and gifts.
@@ -88,6 +88,41 @@ We price the products low and affordable for users to get their prints. 85% is a
 = Can I earn a lot? =
 
 Yes, this is a very easy way of integrating a powerful, yet easy money making suystem on your site.
+
+= How does installing the Print Money plugin change the appearance of my website? =
+
+The look of your site doesn’t change, but visitors who hover over a picture will see a “Print Me” button. On mobile devices, a long tap shows the Print button. As the site owner or administrator, you can determine which pages display the print button, and how the button looks
+
+= What is the minimum size my photos must be to allow them to be printed on one or more products? =
+The minimum size picture that can be placed on an order is 400 x 400 pixels. This is roughly 4 inches x 4 inches.
+
+= What is the minimum size my photos must be to allow them to be printed on one or more products? =
+The Print Money plugin will measure each picture for you and will not display the “Print Me“button if the photo is too small.
+
+= Can customers buy more than one photo in an order? =
+Print Money is based on the idea that most people are printing one special picture. However, we intend to add the ability to choose more than one photo from a gallery or web site in the future.
+
+= How much is shipping? = 
+Shipping is based on the actual cost of shipping by UPS or US mail. dotPhoto does not mark up shipping.
+
+=How much should I sell products for — and which products should I sell?=
+The default product set and their prices are determined by dotPhoto to be the most popular products at attractive prices. Most people start with this collection of products and prices — and then adjust their own prices on their merchandise over time.
+
+=What is the best size for a company logo?=
+Because your logo will appear on all kinds of products, we recommend a 2000 x 2000 pixel image with a 375 pixel margin around your logo in the center.
+
+=Can I set the markup to zero so that I make no money on the sale?=
+Yes. If you are only selling to friends and family, you may want to provide the ability to print photos for as little as possible. dotPhoto sells 4×6 prints for as little as 9 cents and provides very competitive prices on a wide variety of photo merchandise. To set the markup to zero, go to your dotPhoto pricing page.
+
+=Can I provide a coupon to give my friends a discount?=
+Not at this time. We will add coupon-ing and promotional capabilities in the future.
+
+=What is the Ordering Process?=
+Once the Print Me button on your photo is clicked this is the ordering process that is followed.
+
+=What file types are currently printable=
+.JPG
+
 
 
 == Screenshots ==

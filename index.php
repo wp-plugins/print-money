@@ -2,10 +2,10 @@
 /**
  * Plugin Name: Print Money	
  * Description: Add a hover button to any Word Press image to enable your users to buy prints and photo gifts sucha as magnets, frames, mousepads and more. Print Money pays site owners 85% of sales.
- * Plugin URI: http://dotphoto.com
- * Author: David Ahmad
- * Author URI: http://vbsocial.com
- * Version: 3.5
+ * Plugin URI: http://support.dotphoto.com/support/solutions/articles/4000060227-i-ve-installed-the-printmoney-plugin-for-wordpress-how-do-i-get-paid-and-set-prices
+ * Author: Dotphoto Team
+ * Author URI: http://printmoneydemo.com/
+ * Version: 4.3
  * Text Domain: Print-Money
  * License: GPL2
  * Copyright 2015 David Ahmad
@@ -18,7 +18,7 @@ define('PLUGIN_URL',plugin_dir_url( __FILE__ ));
 ------------------------------------------------------------*/
 function myplugin_activate() {
 	$default = array(
-		'container' => array('entry-content','elements-box','thn_post_wrap','list-inline','blog','post','post-content','entry','entry-summary','group','content','content_constrain','page-content','page-content','row','tp-single-post','body','the-content','wrapper','hentry','row-wrapper-x'),
+		'container' => array('entry-content','elements-box','thn_post_wrap','list-inline','blog','post','post-content','entry','entry-summary','group','content','content_constrain','page-content','page-content','row','tp-single-post','body','the-content','wrapper','hentry'),
 		'button_text' => 'Print Me',
 		'position' => 'top-left',
 		'epage' => array(),
