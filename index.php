@@ -12,7 +12,7 @@
  * Copyright 2015 David Ahmad
 */
 
-define('PLUGIN_URL',plugin_dir_url( __FILE__ ));
+/*define('PLUGIN_URL',plugin_dir_url( __FILE__ ));*/
 
 /*
 *  Default Settings 
