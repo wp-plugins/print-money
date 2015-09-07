@@ -1,10 +1,11 @@
 <?php
 /**
  * Plugin Name: Print Money	
- * Description: Add a hover button to any Word Press image to enable your users to buy prints and photo gifts sucha as magnets, frames, mousepads and more. Print Money pays site owners 85% of sales.
- * Plugin URI: http://support.dotphoto.com/support/solutions/articles/4000060227-i-ve-installed-the-printmoney-plugin-for-wordpress-how-do-i-get-paid-and-set-prices
  * Author: Dotphoto Team
  * Author URI: http://printmoneydemo.com/
+ * Plugin URI: http://support.dotphoto.com/support/solutions/articles/4000060227-i-ve-installed-the-printmoney-plugin-for-wordpress-how-do-i-get-paid-and-set-prices
+ * Description: Add a hover button to any Word Press image to enable your users to buy prints and photo gifts sucha as magnets, frames, mousepads and more. Print Money pays site owners 85% of sales.
+ * Author: Dotphoto Team
  * Version: 4.4
  * Text Domain: Print-Money
  * License: GPL2
