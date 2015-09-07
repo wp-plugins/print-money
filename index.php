@@ -5,7 +5,7 @@
  * Plugin URI: http://support.dotphoto.com/support/solutions/articles/4000060227-i-ve-installed-the-printmoney-plugin-for-wordpress-how-do-i-get-paid-and-set-prices
  * Author: Dotphoto Team
  * Author URI: http://printmoneydemo.com/
- * Version: 3.6
+ * Version: 4.4
  * Text Domain: Print-Money
  * License: GPL2
  * Copyright 2015 David Ahmad
