@@ -65,7 +65,7 @@ In the settings of Print Money, scroll to the bottom, and add any pages you wish
 
 This is the default setting.
 
-= How do I change the "look" of a visible button? =
+= How do I change the look of a visible button? =
 
 You can change the text in the settings. If you wish to change the actual appearance, you will need to know basic css and css attributes. You can add CSS inside of wp-admin or to our stylesheet within the plugin samplestyle.css
 
@@ -91,7 +91,7 @@ Yes, this is a very easy way of integrating a powerful, yet easy money making su
 
 = How does installing the Print Money plugin change the appearance of my website? =
 
-The look of your site doesn’t change, but visitors who hover over a picture will see a “Print Me” button. On mobile devices, a long tap shows the Print button. As the site owner or administrator, you can determine which pages display the print button, and how the button looks
+The look of your site does not change, but visitors who hover over a picture will see a “Print Me” button. On mobile devices, a long tap shows the Print button. As the site owner or administrator, you can determine which pages display the print button, and how the button looks
 
 = What is the minimum size my photos must be to allow them to be printed on one or more products? =
 The minimum size picture that can be placed on an order is 400 x 400 pixels. This is roughly 4 inches x 4 inches.
@@ -105,14 +105,14 @@ Print Money is based on the idea that most people are printing one special pictu
 = How much is shipping? = 
 Shipping is based on the actual cost of shipping by UPS or US mail. dotPhoto does not mark up shipping.
 
-=How much should I sell products for — and which products should I sell?=
-The default product set and their prices are determined by dotPhoto to be the most popular products at attractive prices. Most people start with this collection of products and prices — and then adjust their own prices on their merchandise over time.
+=How much should I sell products for and which products should I sell?=
+The default product set and their prices are determined by dotPhoto to be the most popular products at attractive prices. Most people start with this collection of products and prices and then adjust their own prices on their merchandise over time.
 
 =What is the best size for a company logo?=
 Because your logo will appear on all kinds of products, we recommend a 2000 x 2000 pixel image with a 375 pixel margin around your logo in the center.
 
 =Can I set the markup to zero so that I make no money on the sale?=
-Yes. If you are only selling to friends and family, you may want to provide the ability to print photos for as little as possible. dotPhoto sells 4×6 prints for as little as 9 cents and provides very competitive prices on a wide variety of photo merchandise. To set the markup to zero, go to your dotPhoto pricing page.
+Yes. If you are only selling to friends and family, you may want to provide the ability to print photos for as little as possible. dotPhoto sells 4 by 6 prints for as little as 9 cents and provides very competitive prices on a wide variety of photo merchandise. To set the markup to zero, go to your dotPhoto pricing page.
 
 =Can I provide a coupon to give my friends a discount?=
 Not at this time. We will add coupon-ing and promotional capabilities in the future.
@@ -127,13 +127,13 @@ Once the Print Me button on your photo is clicked this is the ordering process t
 
 == Screenshots ==
 
-1. Print Money button shows when hovering over WordPress image
-2. Print Money Button on a Next Gen gallery when hovering over an image or gallery
-3. Print Money on Justified Grid demonstration
-4. Button on a blog image
-5. Backend settings part 1
-6. Backend Settings part 2
-7. Track number of button clicks per image settings on your site
+1. Print Money shows when hovering over an image
+2. Print Money button on a photography site
+3. Print Money button showing over a space image
+4. Print Money buttons work very well on Meme and Viral Sites
+5. Backend settings 
+6. Monetize your logo into goods
+7. Works well on family photo sites
 
 == Changelog ==
 
