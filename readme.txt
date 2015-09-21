@@ -2,9 +2,9 @@
 Contributors: David Ahmad
 Tags: Image Prints, print images, monetize wordpress,print button, image customization, image tweak, Monetize your images, prints,image printer, WordPress images, wordpress monetization,earn money, protect images, image lock, disable right click,image copyrights,image optimizer 
 
-Requires at least: 3.0
-Tested up to: 4.3
-Stable tag: 4.6
+Requires at least:03.1
+Tested up to: 4.3.1
+Stable tag: 4.7
 License: GPLv2 or later
 
 Earn more money from your site by adding a print button to any WordPress image to enable your users to buy prints and gifts.

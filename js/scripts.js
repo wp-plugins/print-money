@@ -27,7 +27,8 @@ jQuery(document).ready(function($) { console.log(pm_settings);
 	function full_url(img) {
 		var fimgsrc = img.attr('src');
 		var fullimg = fimgsrc.replace(/-\d+x\d+(?=\.(jpg|jpeg|png|gif)$)/i, '');
-		return fullimg;
+		var splitparam = fullimg.split('?')
+		return splitparam[0];
 	}
 	
 	/* Add Class When Image size below */
