@@ -4,7 +4,7 @@ Tags: Image Prints, print images, monetize wordpress,print button, image customi
 
 Requires at least:03.1
 Tested up to: 4.3.1
-Stable tag: 4.7
+Stable tag: 4.8
 License: GPLv2 or later
 
 Earn more money from your site by adding a print button to any WordPress image to enable your users to buy prints and gifts.
