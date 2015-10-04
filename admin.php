@@ -33,7 +33,7 @@
 	
 
 			<section>
-            <h2><span class="style1">Your site is all setup!</span> <a href="http://www.dotphoto.com/WPLand.asp?affiliateID=<?php echo site_url(); ?>&amp;action=claim">Create your DotPhoto Account</a> for free to <a href="http://www.dotphoto.com/WPLand.asp?affiliateID=<?php echo site_url(); ?>&amp;action=claim">view your earnings</a>.</h2>
+            <h2><span class="style1">Your site is all setup!</span> <a href="http://www.dotphoto.com/WPLand.asp?affiliateID=<?php echo site_url(); ?>&amp;action=home">Create your DotPhoto Account</a> for free to <a href="http://www.dotphoto.com/WPLand.asp?affiliateID=<?php echo site_url(); ?>&amp;action=claim">view your earnings</a>.</h2>
             <p>Currently this plugin is compatible with over 16,300,247+ downloaded Wordpress themes. If you don't see it when you hover over an image, no sweat - <a href="mailto:printmoney@dotphoto.com">Email us</a> the name of your theme  and we'll get you going within 24 hours.</small></p>
 			</section>
             
