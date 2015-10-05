@@ -4,7 +4,7 @@ Tags: Image Prints, print images, monetize wordpress,print button, image customi
 
 Requires at least:03.1
 Tested up to: 4.3.1
-Stable tag: 4.9
+Stable tag: 4.8
 License: GPLv2 or later
 
 Earn more money from your site by adding a print button to any WordPress image to enable your users to buy prints and gifts.
@@ -134,7 +134,7 @@ Currently only .JPG files can display the Print Me button and be printed.
 2. Print Money button on a photography site
 3. Print Money button showing over a space image
 4. Print Money buttons work very well on Meme and Viral Sites
-5. Click "Print Money" on the Dashboard Menu and customize your Backend Settings (David: I attached a photo more in line with recent releases called PluginSettingsUpdateDavid.jpg. We can update again in the future with newer Print Money Plugin screen.)
+5. Click "Print Money" on the Dashboard Menu and customize your Backend Settings 
 6. Monetize your logo into goods (New dotPhoto logo sent)
 7. Works well on family photo sites
 
